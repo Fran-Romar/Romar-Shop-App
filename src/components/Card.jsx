@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+
 import "../css/Card.css";
 
-export default function Card({ title, image, description, price }) {
+export default function Card({
+  title,
+  image,
+  description,
+  price,
+  handleAgregar,
+  handleQuitar,
+}) {
   const [added, setAdded] = useState(false);
 
   const quitar = () => {
+    handleQuitar();
     setAdded(false);
   };
 
   const agregar = () => {
+    handleAgregar();
     setAdded(true);
   };
 
@@ -22,7 +32,7 @@ export default function Card({ title, image, description, price }) {
       </div>
       {added ? (
         <button type="button" className="boton-quitar" onClick={() => quitar()}>
-          Quitar dle carrito
+          Quitar del carrito
         </button>
       ) : (
         <button
