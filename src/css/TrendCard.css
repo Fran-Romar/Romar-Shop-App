@@ -5,7 +5,6 @@
     color: white;
 
     margin: 30px 0;
-    margin-top: 10px;
 }
 
 .trend-product-title{
@@ -62,13 +61,15 @@
 }
 
 .trend-boton-agregar {
+    position: absolute;
+    bottom: 150px;
+    width: 575px;
     background-color: #dde30f;
     color: #242424;
     border: none;
     border-radius: 10px;
     padding: 10px 15px;
     cursor: pointer;
-    width: 100%;
     font-weight: 700;
   }
   
@@ -77,12 +78,14 @@
   }
   
   .trend-boton-quitar {
+    position: absolute;
+    bottom: 150px;
+    width: 575px;
     background-color: #bdb40a;
     color: #242424;
     border: none;
     border-radius: 10px;
     padding: 10px 15px;
     cursor: pointer;
-    width: 100%;
     font-weight: 700;
   }

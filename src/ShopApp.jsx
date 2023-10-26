@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 
 import { ProductosProvider } from "./context/ProductosProvider";
 import { CarritoProvider } from "./context/CarritoProvider";
+import AllProducts from "./routes/AllProducts";
 
 export default function ShopApp() {
   return (
@@ -14,6 +15,7 @@ export default function ShopApp() {
         <Routes>
           <Route path="/" element={<ComprasPage />}></Route>
           <Route path="/carrito" element={<CarritoPage />}></Route>
+          <Route path="/allproducts" element={<AllProducts />}></Route>
           <Route path="/*" element={<Navigate to="/" />}></Route>
         </Routes>
       </CarritoProvider>
