@@ -2,6 +2,12 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px 0;
+    color: #242424;
+}
+
+.shop-logo{
+    width: 15%;
+    margin-right: 15px;
 }
 
 .navbar-title{
@@ -9,6 +15,7 @@ nav{
     align-items: center;
     justify-content:left;
     margin: 0;
+    font-weight: 800;
 }
 
 .navbar-ul{
@@ -16,7 +23,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 
-    font-size: 110%;
+    font-weight: 800;
     list-style: none;
 
 
@@ -24,22 +31,17 @@ nav{
     padding: 0;
 }
 
-.navbar-button{
-    background-color: transparent;
-    border: #9c880c;
-    border-radius: 10px;
-    padding: 7.5px 12.5px;
-    outline: auto;
-    color: #9c880c;
-}
-
 .navbar-navlink{
     text-decoration: none;
-    color: #9c880c;
+    color: #242424;
 }
 
 .navbar-carrito{
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.carrito{
+    width: 40px;
 }

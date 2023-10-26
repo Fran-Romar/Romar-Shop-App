@@ -3,15 +3,13 @@ import React, { useContext } from "react";
 import Card from "../components/Card";
 import { ProductoContext } from "../context/ProductoContext";
 import { CarritoContext } from "../context/CarritoContext";
-import TrendCard from "../components/TrendCard";
+import TrendBanner from "../components/TrendBanner";
 
 import { Row } from "react-bootstrap";
 
 export default function ComprasPage() {
   const { products } = useContext(ProductoContext);
   const { agregarCompra, eliminarCompra } = useContext(CarritoContext);
-
-  console.log(products);
 
   const trendProduct = () => {
     let productoMasRating = null;
@@ -39,14 +37,13 @@ export default function ComprasPage() {
 
   return (
     <>
-      <TrendCard
+      <TrendBanner
         trendProduct={trendProduct()}
-        handleAgregar={handleAgregar}
-        handleQuitar={handleQuitar}
-      ></TrendCard>
-      <div className="container">
-        <h1 className="text-center">Compras</h1>
-        <hr />
+        handleAgregar={() => handleAgregar(trendProduct())}
+        handleQuitar={() => handleQuitar(trendProduct().id)}
+      ></TrendBanner>
+      <div className="container productos-container">
+        <h1 className="productos-title">ALL PRODUCTS</h1>
         <div className="cards-container">
           <Row>
             {products.map((product) => (

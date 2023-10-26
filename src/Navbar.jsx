@@ -13,33 +13,30 @@ export default function Navbar() {
   return (
     <nav className="container">
       <NavLink className="navbar-navlink" to="/">
-        <h1 className="navbar-title">SHOPAPP</h1>
+        <h1 className="navbar-title">
+          <img className="shop-logo" src="s.png" alt="STYLESHOP" />
+          STYLESHOP
+        </h1>
       </NavLink>
       <ul className="navbar-ul">
         <li className="navbar-li">
-          <button className="navbar-button">
-            <NavLink to="/" className="navbar-navlink">
-              Compras
-            </NavLink>
-          </button>
+          <NavLink to="/" className="navbar-navlink">
+            COMPRAS
+          </NavLink>
         </li>
         <li className="navbar-li">
-          <button className="navbar-button">
-            <NavLink to="/" className="navbar-navlink">
-              Compras
-            </NavLink>
-          </button>
+          <NavLink to="/" className="navbar-navlink">
+            COMPRAS
+          </NavLink>
         </li>
         <li className="navbar-li">
-          <button className="navbar-button">
-            <NavLink to="/" className="navbar-navlink">
-              Compras
-            </NavLink>
-          </button>
+          <NavLink to="/" className="navbar-navlink">
+            COMPRAS
+          </NavLink>
         </li>
       </ul>
       <NavLink to="/carrito" className="navbar-carrito">
-        <Badge badgeContent={listaCompras.length} color="secondary">
+        <Badge badgeContent={listaCompras.length} color="warning" max={99}>
           <ShoppingCartIcon color="action" />
         </Badge>
       </NavLink>

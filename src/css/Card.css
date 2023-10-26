@@ -1,45 +1,37 @@
 /* Estilos para la tarjeta */
 
-/* --earls-green-50: #fafde9;
---earls-green-100: #f2fcc5;
---earls-green-200: #eafa8e;
---earls-green-300: #e4f74d;
---earls-green-400: #e3f31c;
---earls-green-500: #dde30f;
---earls-green-600: #bdb40a;
---earls-green-700: #9c880c;
---earls-green-800: #816b12;
---earls-green-900: #6e5715;
---earls-green-950: #402f08; */
-
-
+.productos-title{
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 300%;
+  font-style: italic;
+  padding: 40px 0;
+  background-color: #242424;
+  margin-bottom: 30px;
+}
 
 .product-col{
   margin-bottom: 20px
 }
 
 .product-card {
-  border: 1px solid grey;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 20px;
   padding: 20px;
-
   height: 400px;
-  
-  /* display: flex;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px; */
+  box-shadow: 0 0 5px grey;
+}
+
+.product-card:hover{
+  box-shadow: 0 0 10px #242424;
+  transition: 0.3s ease;
 }
 
 .card-image {
   width: 100%;
   height: 57.5%;
   margin-bottom: 10px;
-  /*
-  object-fit: cover;
-  border-radius: 4px;
-  margin-right: 10px; */
 }
 
 .card-title {
