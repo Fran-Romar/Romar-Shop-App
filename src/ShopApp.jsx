@@ -10,14 +10,12 @@ export default function ShopApp() {
   return (
     <ProductosProvider>
       <CarritoProvider>
-        <div className="container">
-          <Navbar></Navbar>
-          <Routes>
-            <Route path="/" element={<ComprasPage />}></Route>
-            <Route path="/carrito" element={<CarritoPage />}></Route>
-            <Route path="/*" element={<Navigate to="/" />}></Route>
-          </Routes>
-        </div>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<ComprasPage />}></Route>
+          <Route path="/carrito" element={<CarritoPage />}></Route>
+          <Route path="/*" element={<Navigate to="/" />}></Route>
+        </Routes>
       </CarritoProvider>
     </ProductosProvider>
   );

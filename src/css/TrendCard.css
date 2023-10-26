@@ -1,0 +1,6 @@
+.trend-card-container{
+    z-index: 1;
+    width: 100%;
+    background-color: #816b12;
+    height: 500px;
+}

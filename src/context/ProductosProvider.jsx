@@ -8,7 +8,7 @@ export function ProductosProvider({ children }) {
     const data = await fetch("https://fakestoreapi.com/products/").then((res) =>
       res.json()
     );
-    console.log(data);
+    // console.log(data);
     setProducts(data);
   };
 

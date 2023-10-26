@@ -1,0 +1,45 @@
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 0;
+}
+
+.navbar-title{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    margin: 0;
+}
+
+.navbar-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 110%;
+    list-style: none;
+
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-button{
+    background-color: transparent;
+    border: #9c880c;
+    border-radius: 10px;
+    padding: 7.5px 12.5px;
+    outline: auto;
+    color: #9c880c;
+}
+
+.navbar-navlink{
+    text-decoration: none;
+    color: #9c880c;
+}
+
+.navbar-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
