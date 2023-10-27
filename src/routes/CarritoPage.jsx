@@ -25,7 +25,7 @@ export default function CarritoPage() {
             <h5>SHOP CART</h5>
           </div>
           <h6>NO PRODUCTS IN THE CART</h6>
-          <Link to="/allproducts">
+          <Link to="/all-products">
             <button type="button">KEEP BUYING</button>
           </Link>
         </div>

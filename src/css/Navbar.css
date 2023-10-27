@@ -54,3 +54,42 @@ nav{
 .carrito{
     width: 40px;
 }
+
+/* --- DROPDOWN --- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: white;
+    color: black;
+    font-weight: 800    ;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button:hover{
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    display: block;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}

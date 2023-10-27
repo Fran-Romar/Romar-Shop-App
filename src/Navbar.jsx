@@ -4,6 +4,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { NavLink } from "react-router-dom";
 
 import { CarritoContext } from "./context/CarritoContext";
+import Dropdown from "./components/Dropdown";
 
 import "./css/Navbar.css";
 
@@ -25,9 +26,7 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li className="navbar-li">
-          <NavLink to="/" className="navbar-navlink">
-            CATEGORIES
-          </NavLink>
+          <Dropdown></Dropdown>
         </li>
         <li className="navbar-li">
           <NavLink to="/" className="navbar-navlink">
