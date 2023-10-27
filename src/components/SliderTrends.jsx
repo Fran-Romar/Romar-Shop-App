@@ -67,9 +67,11 @@ export default function SliderTrends({ trendsProducts }) {
                         +{product.rating.count} vendidos
                       </p>
                     </div>
-                    <button className="slice-button" type="button">
-                      Ver Producto
-                    </button>
+                    <div className="slider-button-container">
+                      <button className="slice-button" type="button">
+                        Ver Producto
+                      </button>
+                    </div>
                   </div>
                 </Col>
               </Row>

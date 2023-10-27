@@ -2,7 +2,6 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px 0;
-    color: #242424;
 }
 
 .shop-logo{
@@ -33,7 +32,17 @@ nav{
 
 .navbar-navlink{
     text-decoration: none;
+    color: black;
+}
+
+.navbar-navlink-h1{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-navlink:hover{
     color: #242424;
+    text-decoration: underline;
 }
 
 .navbar-carrito{

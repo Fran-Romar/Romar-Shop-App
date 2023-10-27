@@ -4,7 +4,7 @@
     height: 510px;
     color: white;
 
-    margin: 30px 0;
+    margin: 100px 0;
 }
 
 .trend-product-title{
@@ -60,32 +60,37 @@
     font-size: 150%;
 }
 
+.trend-card-button-container{
+    position: relative;
+    height: 50px;
+}
+
 .trend-boton-agregar {
     position: absolute;
-    bottom: 150px;
+    bottom: 0px;
     width: 575px;
     background-color: #dde30f;
     color: #242424;
     border: none;
-    border-radius: 10px;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;
-  }
-  
-  .trend-boton-agregar:hover{
-    background-color: #bdb40a;
-  }
-  
-  .trend-boton-quitar {
+}
+
+.trend-boton-agregar:hover{
+    border: 2px solid #dde30f;
+    background-color: #242424;
+    color: #dde30f;
+}
+
+.trend-boton-quitar {
     position: absolute;
-    bottom: 150px;
+    bottom: 0px;
     width: 575px;
-    background-color: #bdb40a;
-    color: #242424;
-    border: none;
-    border-radius: 10px;
+    border: 2px solid #dde30f;
+    background-color: #242424;
+    color: #dde30f;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;
-  }
+}

@@ -4,7 +4,7 @@
     justify-content: center;
 
     margin: 50px 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .slider-card-container{
@@ -72,21 +72,27 @@
     margin-left: 10px;
 }
 
+.slider-button-container{
+    position: relative;
+    height: 50px;
+}
+
 .slice-button{
     position: absolute;
     background-color: #dde30f;
     color: #242424;
     border: none;
-    border-radius: 10px;
     padding: 10px 15px;
     cursor: pointer;
     width: 490px;
-    bottom: -575px;
+    bottom: 0px;
     font-weight: 700;
 }
 
 .slice-button:hover{
-    background-color: #bdb40a;
+    background-color: #242424;
+    border: 2px solid #dde30f;
+    color: #dde30f;
 }
 
 /* --- ARROWS --- */

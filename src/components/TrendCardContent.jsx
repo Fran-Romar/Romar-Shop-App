@@ -38,23 +38,25 @@ export default function TrendCardContent({
         <b>{price}$</b>
       </p>
       <p className="trend-card-description">{description}</p>
-      {added ? (
-        <button
-          type="button"
-          className="trend-boton-quitar"
-          onClick={() => quitar()}
-        >
-          <i className="fa fa-check"></i>
-        </button>
-      ) : (
-        <button
-          type="button"
-          className="trend-boton-agregar"
-          onClick={() => agregar()}
-        >
-          Agregar al carrito
-        </button>
-      )}
+      <div className="trend-card-button-container">
+        {added ? (
+          <button
+            type="button"
+            className="trend-boton-quitar"
+            onClick={() => quitar()}
+          >
+            <i className="fa fa-check"></i>
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="trend-boton-agregar"
+            onClick={() => agregar()}
+          >
+            Agregar al carrito
+          </button>
+        )}
+      </div>
     </div>
   );
 }

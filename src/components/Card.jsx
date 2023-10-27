@@ -44,7 +44,7 @@ export default function Card({
             <p className="card-count">+{rating.count} vendidos</p>
           </div>
           <p className="card-price">
-            <b>{price}</b>
+            <b>{price}$</b>
           </p>
         </div>
         {added ? (

@@ -7,6 +7,8 @@ import { ProductosProvider } from "./context/ProductosProvider";
 import { CarritoProvider } from "./context/CarritoProvider";
 import AllProducts from "./routes/AllProducts";
 
+import "./css/General.css";
+
 export default function ShopApp() {
   return (
     <ProductosProvider>

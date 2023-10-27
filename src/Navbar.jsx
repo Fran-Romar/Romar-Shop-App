@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="container">
-      <NavLink className="navbar-navlink" to="/">
+      <NavLink className="navbar-navlink-h1" to="/">
         <h1 className="navbar-title">
           <img className="shop-logo" src="s.png" alt="STYLESHOP" />
           STYLESHOP

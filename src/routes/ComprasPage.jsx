@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { ProductoContext } from "../context/ProductoContext";
 import TrendBanner from "../components/TrendBanner";
 import SliderTrends from "../components/SliderTrends";
+import ShopBanner from "../components/ShopBanner";
 
 import {
   f10trendproducts,
@@ -20,6 +21,7 @@ export default function ComprasPage() {
 
   return (
     <>
+      <ShopBanner></ShopBanner>
       <TrendBanner
         trendProduct={trendProduct}
         handleAgregar={() => handleAgregar(trendProduct)}
