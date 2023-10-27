@@ -20,7 +20,7 @@ export default function Navbar() {
       </NavLink>
       <ul className="navbar-ul">
         <li className="navbar-li">
-          <NavLink to="/allproducts" className="navbar-navlink">
+          <NavLink to="/all-products" className="navbar-navlink">
             ALL OUR PRODUCTS
           </NavLink>
         </li>

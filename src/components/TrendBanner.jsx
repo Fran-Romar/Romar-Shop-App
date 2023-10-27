@@ -4,7 +4,7 @@ import TrendCard from "./TrendCard";
 import TrendCardContent from "./TrendCardContent";
 
 import { Col, Row } from "react-bootstrap";
-import "../css/TrendCard.css";
+import "../css/Trend.css";
 
 export default function TrendBanner({
   trendProduct,

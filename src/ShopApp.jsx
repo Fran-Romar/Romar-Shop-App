@@ -8,6 +8,7 @@ import { CarritoProvider } from "./context/CarritoProvider";
 import AllProducts from "./routes/AllProducts";
 
 import "./css/General.css";
+import TrendPage from "./routes/TrendPage";
 
 export default function ShopApp() {
   return (
@@ -17,7 +18,11 @@ export default function ShopApp() {
         <Routes>
           <Route path="/" element={<ComprasPage />}></Route>
           <Route path="/carrito" element={<CarritoPage />}></Route>
-          <Route path="/allproducts" element={<AllProducts />}></Route>
+          <Route path="/all-products" element={<AllProducts />}></Route>
+          <Route
+            path="/trend-products"
+            element={<TrendPage></TrendPage>}
+          ></Route>
           <Route path="/*" element={<Navigate to="/" />}></Route>
         </Routes>
       </CarritoProvider>
