@@ -22,7 +22,7 @@ export default function Navbar() {
       <ul className="navbar-ul">
         <li className="navbar-li">
           <NavLink to="/all-products" className="navbar-navlink">
-            ALL OUR PRODUCTS
+            PRODUCTS
           </NavLink>
         </li>
         <li className="navbar-li">

@@ -1,7 +1,9 @@
+/* --- TREND CARD --- */
+
 .trend-card-container{
     width: 100%;
     background-color: #242424;
-    height: 510px;
+    height: auto;
     color: white;
 
     margin: 40px 0;
@@ -31,7 +33,7 @@
 .trend-card-img{
     margin-top: 20px;
 
-    width: 425px;
+    width: 80%;
     height: 300px;
 
     border-radius: 15px;
@@ -60,15 +62,17 @@
     font-size: 150%;
 }
 
+.trend-card-description{
+    text-align: justify;
+}
+
 .trend-card-button-container{
     position: relative;
     height: 50px;
 }
 
 .trend-boton-agregar {
-    position: absolute;
-    bottom: 0px;
-    width: 575px;
+    width: 100%;
     background-color: #dde30f;
     color: #242424;
     border: none;
@@ -84,13 +88,68 @@
 }
 
 .trend-boton-quitar {
-    position: absolute;
-    bottom: 0px;
-    width: 575px;
+    width: 100%;
     border: 2px solid #dde30f;
     background-color: #242424;
     color: #dde30f;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;
+}
+
+/* --- MEDIA --- */
+
+@media (max-width: 1199.5px){
+    .trend-card-description{
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 991.5px){
+    .trend-card-description{
+        -webkit-line-clamp: 5;
+    }
+
+    .trend-product-title{
+        margin-left: 20px;
+    }
+
+    .trend-card-img{
+        margin-left: 20px;
+        height: 225px;
+    }
+
+    .trend-card-title{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 767.5px){
+    .trend-product-title{
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 250%;
+    }
+
+    .trend-card-img{
+        margin-left: 0;
+        width: 70%;
+    }
+
+    .trend-card-title{
+        text-align: justify;
+    }
+
+    .trend-card-content{
+        padding: 30px 40px;
+        padding-top: 50px;
+    }
 }

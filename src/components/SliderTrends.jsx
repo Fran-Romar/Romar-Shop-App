@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 
 import { Col, Row } from "react-bootstrap";
-import "../css/Slider.css";
 
 export default function SliderTrends({ trendsProducts }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,7 +20,7 @@ export default function SliderTrends({ trendsProducts }) {
   };
 
   return (
-    <div className="container">
+    <>
       <h4 className="productos-title">TOP 10 TREND PRODUCTS</h4>
       <div className="slider-container">
         <button
@@ -29,7 +28,7 @@ export default function SliderTrends({ trendsProducts }) {
           type="button"
           onClick={() => toSlide("prev")}
         >
-          <i className="fa fa-arrow-left"></i>
+          &#x2329;
         </button>
         {trendsProducts &&
           trendsProducts.map((product, index) => (
@@ -53,24 +52,27 @@ export default function SliderTrends({ trendsProducts }) {
                       <i className="fa fa-bolt"></i> TOP {index + 1}
                     </h4>
                     <h3 className="slider-title">{product.title}</h3>
-                    <p className="slice-price">
+                    <p className="slider-price">
                       <b>Best Price: {product.price}$</b>
                     </p>
-                    <div className="slice-rating-container">
+                    <div className="slider-rating-container">
                       <Rating
                         name="half-rating-read"
                         defaultValue={product.rating.rate}
                         precision={0.5}
                         readOnly
                       />
-                      <p className="slice-count">
+                      <p className="slider-count">
                         +{product.rating.count} vendidos
                       </p>
                     </div>
                     <div className="slider-button-container">
-                      <button className="slice-button" type="button">
+                      <button className="slider-button" type="button">
                         Ver Producto
                       </button>
+                    </div>
+                    <div className="slider-movil-button-container">
+                      <div className="slider-movil-button"></div>
                     </div>
                   </div>
                 </Col>
@@ -82,9 +84,9 @@ export default function SliderTrends({ trendsProducts }) {
           type="button"
           onClick={() => toSlide("next")}
         >
-          <i className="fa fa-arrow-right"></i>
+          &#x232a;
         </button>
       </div>
-    </div>
+    </>
   );
 }

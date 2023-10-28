@@ -45,10 +45,6 @@
 
 /* --- ITEMS --- */
 
-.items-container{
-    border-top: 1px solid #242424;
-}
-
 .items-container h5{
     text-align: center;
     font-size: 300%;

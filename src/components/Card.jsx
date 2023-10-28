@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import Rating from "@mui/material/Rating";
 
-import "../css/Card.css";
 import { Col } from "react-bootstrap";
 
 export default function Card({

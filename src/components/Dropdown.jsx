@@ -11,15 +11,26 @@ export default function Dropdown() {
   return (
     <div className="dropdown">
       <button onClick={toggleDropdown} className="dropdown-button">
-        CATEGORIES <i className="fa fa-arrow-down"></i>
+        CATEGORIES &#x25bc;
       </button>
       {isOpen && (
         <div className="dropdown-content">
-          <Link to="/trend-products">Trend Products</Link>
-          <Link to="#">Jewelery</Link>
-          <Link to="#">Electronics</Link>
-          <Link to="#">Men's Clothing</Link>
-          <Link to="#">Women's Clothing</Link>
+          <Link to="/trend-products" onClick={toggleDropdown}>
+            Trend Products
+          </Link>
+          <hr />
+          <Link to="#" onClick={toggleDropdown}>
+            Jewelery
+          </Link>
+          <Link to="#" onClick={toggleDropdown}>
+            Electronics
+          </Link>
+          <Link to="#" onClick={toggleDropdown}>
+            Men's Clothing
+          </Link>
+          <Link to="#" onClick={toggleDropdown}>
+            Women's Clothing
+          </Link>
         </div>
       )}
     </div>
