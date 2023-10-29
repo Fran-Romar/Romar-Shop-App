@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 
-import Rating from "@mui/material/Rating";
-
 import { Col } from "react-bootstrap";
 
-export default function Card({
-  title,
-  image,
-  price,
-  rating,
-  handleAgregar,
-  handleQuitar,
-}) {
+import CardButton from "./CardButton";
+import Rating from "@mui/material/Rating";
+
+export default function Card({ product, handleAgregar, handleQuitar }) {
   const [added, setAdded] = useState(false);
 
   const quitar = () => {
@@ -27,40 +21,28 @@ export default function Card({
   return (
     <Col md="3 col-6" id="product-col">
       <div className="product-card">
-        <img src={image} alt={title} className="card-image" />
+        <img src={product.image} alt={product.title} className="card-image" />
         <div className="card-content">
-          <h3 title={title} className="card-title">
-            {title}
+          <h3 title={product.title} className="card-title">
+            {product.title}
           </h3>
           <div className="card-rating">
             <Rating
               name="half-rating-read"
-              defaultValue={rating.rate}
+              defaultValue={product.rating.rate}
               precision={0.5}
               readOnly
             />
-            <p className="card-count">+{rating.count} vendidos</p>
+            <p className="card-count">+{product.rating.count} vendidos</p>
           </div>
           <p className="card-price">
-            <b>{price}$</b>
+            <b>{product.price}$</b>
           </p>
         </div>
         {added ? (
-          <button
-            type="button"
-            className="boton-quitar"
-            onClick={() => quitar()}
-          >
-            <i className="fa fa-check"></i>
-          </button>
+          <CardButton estado={"quitar"} funcion={quitar}></CardButton>
         ) : (
-          <button
-            type="button"
-            className="boton-agregar"
-            onClick={() => agregar()}
-          >
-            Agregar al carrito
-          </button>
+          <CardButton estado={"agregar"} funcion={agregar}></CardButton>
         )}
       </div>
     </Col>

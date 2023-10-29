@@ -20,10 +20,7 @@ export default function Products() {
           {products.map((product) => (
             <Card
               key={product.id}
-              title={product.title}
-              image={product.image}
-              price={product.price}
-              rating={product.rating}
+              product={product}
               handleAgregar={() => handleAgregar(product)}
               handleQuitar={() => handleQuitar(product.id)}
             ></Card>

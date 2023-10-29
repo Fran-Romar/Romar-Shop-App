@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
-import Rating from "@mui/material/Rating";
+import { Row } from "react-bootstrap";
 
-import { Col, Row } from "react-bootstrap";
+import Arrow from "./Arrow";
+import SliderImg from "./SliderImg";
+import SliderContent from "./SliderContent";
 
 export default function SliderTrends({ trendsProducts }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,13 +25,7 @@ export default function SliderTrends({ trendsProducts }) {
     <>
       <h4 className="productos-title">TOP 10 TREND PRODUCTS</h4>
       <div className="slider-container">
-        <button
-          className="left-arrow"
-          type="button"
-          onClick={() => toSlide("prev")}
-        >
-          &#x2329;
-        </button>
+        <Arrow direction="left" type="primary" toSlide={toSlide}></Arrow>
         {trendsProducts &&
           trendsProducts.map((product, index) => (
             <div
@@ -39,66 +35,16 @@ export default function SliderTrends({ trendsProducts }) {
               }`}
             >
               <Row>
-                <Col md="6" className="slider-col-img">
-                  <img
-                    className="slider-img"
-                    src={product.image}
-                    alt={product.title}
-                  />
-                </Col>
-                <Col md="6">
-                  <div className="slider-content">
-                    <h4 className="slider-top">
-                      <i className="fa fa-bolt"></i> TOP {index + 1}
-                    </h4>
-                    <h3 className="slider-title">{product.title}</h3>
-                    <p className="slider-price">
-                      <b>Best Price: {product.price}$</b>
-                    </p>
-                    <div className="slider-rating-container">
-                      <Rating
-                        name="half-rating-read"
-                        defaultValue={product.rating.rate}
-                        precision={0.5}
-                        readOnly
-                      />
-                      <p className="slider-count">
-                        +{product.rating.count} vendidos
-                      </p>
-                    </div>
-                    <div className="slider-button-container">
-                      <button className="slider-button" type="button">
-                        Ver Producto
-                      </button>
-                    </div>
-                  </div>
-                  <div className="second-arrows-container">
-                    <button
-                      className="left-second-arrow"
-                      type="button"
-                      onClick={() => toSlide("prev")}
-                    >
-                      &#x2329;
-                    </button>
-                    <button
-                      className="right-second-arrow"
-                      type="button"
-                      onClick={() => toSlide("next")}
-                    >
-                      &#x232a;
-                    </button>
-                  </div>
-                </Col>
+                <SliderImg product={product}></SliderImg>
+                <SliderContent
+                  toSlide={toSlide}
+                  product={product}
+                  index={index}
+                ></SliderContent>
               </Row>
             </div>
           ))}
-        <button
-          className="right-arrow"
-          type="button"
-          onClick={() => toSlide("next")}
-        >
-          &#x232a;
-        </button>
+        <Arrow direction="right" type="primary" toSlide={toSlide}></Arrow>
       </div>
     </>
   );
