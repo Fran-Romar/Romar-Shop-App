@@ -9,7 +9,6 @@ export default function Card({
   image,
   price,
   rating,
-  col,
   handleAgregar,
   handleQuitar,
 }) {
@@ -26,7 +25,7 @@ export default function Card({
   };
 
   return (
-    <Col md={col} className="product-col">
+    <Col md="3 col-6" id="product-col">
       <div className="product-card">
         <img src={image} alt={title} className="card-image" />
         <div className="card-content">

@@ -71,9 +71,22 @@ export default function SliderTrends({ trendsProducts }) {
                         Ver Producto
                       </button>
                     </div>
-                    <div className="slider-movil-button-container">
-                      <div className="slider-movil-button"></div>
-                    </div>
+                  </div>
+                  <div className="second-arrows-container">
+                    <button
+                      className="left-second-arrow"
+                      type="button"
+                      onClick={() => toSlide("prev")}
+                    >
+                      &#x2329;
+                    </button>
+                    <button
+                      className="right-second-arrow"
+                      type="button"
+                      onClick={() => toSlide("next")}
+                    >
+                      &#x232a;
+                    </button>
                   </div>
                 </Col>
               </Row>

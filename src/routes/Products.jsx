@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { Row } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 
 import Card from "../components/Card";
 import { useButton } from "../hooks/useButton";
@@ -13,7 +13,7 @@ export default function Products() {
   const { handleAgregar, handleQuitar } = useButton();
 
   return (
-    <div className="container">
+    <Container>
       <h4 className="productos-title">ALL OUR PRODUCTS</h4>
       <div className="cards-container">
         <Row>
@@ -24,13 +24,12 @@ export default function Products() {
               image={product.image}
               price={product.price}
               rating={product.rating}
-              col={"3"}
               handleAgregar={() => handleAgregar(product)}
               handleQuitar={() => handleQuitar(product.id)}
             ></Card>
           ))}
         </Row>
       </div>
-    </div>
+    </Container>
   );
 }
