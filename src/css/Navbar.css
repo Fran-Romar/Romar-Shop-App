@@ -90,7 +90,7 @@ header .nav-btn{
     header .nav-btn{
         visibility: visible;
         opacity: 1;
-    }
+    }   
 
     header nav{
         position: fixed;
@@ -105,7 +105,7 @@ header .nav-btn{
         gap: 1.5rem;
         background-color: white;
         transition: 1s ease;
-        transform: translateY(-100vh);
+        transform: translateY(-125vh);
         font-size: 125%;
         z-index: 100;
     }

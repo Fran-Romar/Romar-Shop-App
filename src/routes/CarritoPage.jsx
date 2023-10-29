@@ -22,7 +22,7 @@ export default function CarritoPage() {
             <Row>
               <Col md="7">
                 {listaCompras.map((item) => (
-                  <CartCard item={item}></CartCard>
+                  <CartCard key={item.id} item={item}></CartCard>
                 ))}
               </Col>
               <Col md="5">
