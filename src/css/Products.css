@@ -6,7 +6,7 @@
   background-color: #242424;
   color: white;
   padding: 20px;
-  height: 400px;
+  height: 460px;
   box-shadow: 0 0 5px grey;
 
   transition: 0.3s ease;
@@ -28,7 +28,10 @@
   font-size: 175%;
   cursor: pointer;
 
-  white-space: nowrap;
+  white-space: inherit; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -97,15 +100,6 @@
   .product-card{
     font-size: 90%;
     height: 440px;
-  }
-
-  .card-title{
-    white-space: inherit; 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .card-image{

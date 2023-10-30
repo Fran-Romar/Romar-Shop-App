@@ -30,7 +30,7 @@ export default function Navbar() {
           PRODUCTS
         </NavLink>
         <Dropdown showNavbar={showNavbar}></Dropdown>
-        <NavLink to="/" className="navbar-navlink" onClick={showNavbar}>
+        <NavLink to="/search" className="navbar-navlink" onClick={showNavbar}>
           SEARCH
         </NavLink>
         <NavLink
