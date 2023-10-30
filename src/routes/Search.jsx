@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 
 import { ProductoContext } from "../context/ProductoContext";
+import { useButton } from "../hooks/useButton";
 import Card from "../components/Card";
 
 import { Row } from "react-bootstrap";
@@ -12,7 +13,9 @@ export default function Search() {
   const [cabezera, setCabezera] = useState("SEARCH PRODUCTS");
   const [value, setValue] = useState("");
   const [filterProducts, setFilterProducts] = useState([]);
+
   const { products } = useContext(ProductoContext);
+  const { handleAgregar, handleQuitar } = useButton();
 
   const handleSubmit = (e) => {
     e.preventDefault();

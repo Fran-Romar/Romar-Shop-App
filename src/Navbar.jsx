@@ -8,7 +8,7 @@ import Dropdown from "./components/Dropdown";
 
 import "./css/Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ categories }) {
   const { listaCompras } = useContext(CarritoContext);
   const navRef = useRef();
 
@@ -29,7 +29,7 @@ export default function Navbar() {
         >
           PRODUCTS
         </NavLink>
-        <Dropdown showNavbar={showNavbar}></Dropdown>
+        <Dropdown categories={categories} showNavbar={showNavbar}></Dropdown>
         <NavLink to="/search" className="navbar-navlink" onClick={showNavbar}>
           SEARCH
         </NavLink>

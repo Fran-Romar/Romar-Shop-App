@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-export default function Dropdown({ showNavbar }) {
+export default function Dropdown({ categories, showNavbar }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -25,18 +25,16 @@ export default function Dropdown({ showNavbar }) {
             Trend Products
           </Link>
           <hr />
-          <Link to="#" onClick={functions}>
-            Jewelery
-          </Link>
-          <Link to="#" onClick={functions}>
-            Electronics
-          </Link>
-          <Link to="#" onClick={functions}>
-            Men's Clothing
-          </Link>
-          <Link to="#" onClick={functions}>
-            Women's Clothing
-          </Link>
+          {categories &&
+            categories.map((category, index) => (
+              <Link
+                key={index}
+                to={`/${category.replace(/\s/g, "")}`}
+                onClick={functions}
+              >
+                {category}
+              </Link>
+            ))}
         </div>
       )}
     </div>
