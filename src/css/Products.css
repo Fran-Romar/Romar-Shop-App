@@ -36,6 +36,11 @@
   text-overflow: ellipsis;
 }
 
+.card-link{
+  color: white;
+  text-decoration: none;
+}
+
 .card-rating{
   display: flex;
   align-items: center;

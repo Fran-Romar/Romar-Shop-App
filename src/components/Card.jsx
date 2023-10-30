@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import CardButton from "./CardButton";
 import Rating from "@mui/material/Rating";
@@ -21,11 +22,15 @@ export default function Card({ product, handleAgregar, handleQuitar }) {
   return (
     <Col md="3 col-6" id="product-col">
       <div className="product-card">
-        <img src={product.image} alt={product.title} className="card-image" />
+        <Link to={`/all-products/${product.id}`}>
+          <img src={product.image} alt={product.title} className="card-image" />
+        </Link>
         <div className="card-content">
-          <h3 title={product.title} className="card-title">
-            {product.title}
-          </h3>
+          <Link className="card-link" to={`/all-products/${product.id}`}>
+            <h3 title={product.title} className="card-title">
+              {product.title}
+            </h3>
+          </Link>
           <div className="card-rating">
             <Rating
               name="half-rating-read"
