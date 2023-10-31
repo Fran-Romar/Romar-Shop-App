@@ -44,11 +44,13 @@ export default function Card({ product, handleAgregar, handleQuitar }) {
             <b>{product.price}$</b>
           </p>
         </div>
-        {added ? (
-          <CardButton estado={"quitar"} funcion={quitar}></CardButton>
-        ) : (
-          <CardButton estado={"agregar"} funcion={agregar}></CardButton>
-        )}
+        <div className="card-buttons">
+          {added ? (
+            <CardButton estado={"quitar"} funcion={quitar}></CardButton>
+          ) : (
+            <CardButton estado={"agregar"} funcion={agregar}></CardButton>
+          )}
+        </div>
       </div>
     </Col>
   );

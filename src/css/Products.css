@@ -59,7 +59,7 @@
   font-size: 150%;
 }
 
-.boton-agregar {
+.card-buttons .boton-agregar {
   background-color: #dde30f;
   color: #242424;
   border: none;
@@ -69,13 +69,13 @@
   font-weight: 700;
 }
 
-.boton-agregar:hover{
+.card-buttons .boton-agregar:hover{
   border: 2px solid #dde30f;
   background-color: #242424;
   color: #dde30f;
 }
 
-.boton-quitar {
+.card-buttons .boton-quitar {
   border: 2px solid #dde30f;
   background-color: #242424;
   color: #dde30f;
@@ -144,7 +144,7 @@
     font-size: 150%;
   }
 
-  .boton-agregar:hover{
+  .card-buttons.boton-agregar:hover{
   border: none;
   background-color: #dde30f;
   color: #242424;
