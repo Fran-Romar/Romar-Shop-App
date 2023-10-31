@@ -1,0 +1,68 @@
+.footer-hr{
+    margin-top: 0;
+}
+
+.shop-footer{
+    padding: 20px;
+    color: black;
+    border-top: 1px solid rgb(171, 171, 171);
+}
+
+.footer-rrss{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-rrss ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-rrss li{
+    margin: 0 6%;
+    font-size: 175%;
+}
+
+.footer-rrss li i{
+    color: black;
+}
+
+.footer-politics{
+    padding: 30px 0 20px 0;
+}
+
+.footer-politics ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-politics li{
+    font-weight: 500;
+    margin: 0 4%;
+    cursor: pointer;
+}
+
+.footer-politics li:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:575.5px){
+    .footer-politics ul{
+        flex-direction: column;
+    }
+    .footer-politics li{
+        margin: 1% 4%;
+    }
+}

@@ -9,6 +9,7 @@ import TrendPage from "./routes/TrendPage";
 import CategoryPage from "./routes/CategoryPage";
 import Product from "./routes/Product";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 import { ProductosProvider } from "./context/ProductosProvider";
 import { CarritoProvider } from "./context/CarritoProvider";
@@ -66,6 +67,7 @@ function ShopAppContent() {
           ))}
         <Route path="/*" element={<Navigate to="/" />}></Route>
       </Routes>
+      <Footer></Footer>
     </>
   );
 }

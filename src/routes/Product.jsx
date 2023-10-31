@@ -34,10 +34,10 @@ export default function Product({ products }) {
 
   return (
     <>
-      <hr />
+      <hr className="product-hr" />
       <div className="container product-container">
         <Row>
-          <Col md="6">
+          <Col md="5" className="product-border">
             {product && (
               <div className="product-img-container">
                 <img
@@ -48,7 +48,7 @@ export default function Product({ products }) {
               </div>
             )}
           </Col>
-          <Col md="6">
+          <Col md="7">
             {product && (
               <div className="product-content-container">
                 <h4>{product.title}</h4>
@@ -59,11 +59,9 @@ export default function Product({ products }) {
                     precision={0.5}
                     readOnly
                   />
-                  <p className="product-count">
-                    +{product.rating.count} vendidos
-                  </p>
+                  <p className="product-count">+{product.rating.count} sold</p>
                 </div>
-                <p className="product-price">€{product.price} EUR</p>
+                <p className="product-price">${product.price}</p>
                 <p className="product-description">{product.description}</p>
                 <div className="product-buttons">
                   {added ? (

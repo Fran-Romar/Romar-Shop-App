@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import Rating from "@mui/material/Rating";
 
@@ -25,9 +27,9 @@ export default function SliderContent({ toSlide, product, index }) {
           <p className="slider-count">+{product.rating.count} vendidos</p>
         </div>
         <div className="slider-button-container">
-          <button className="slider-button" type="button">
-            Ver Producto
-          </button>
+          <Link className="link" to={`/all-products/${product.id}`}>
+            <div className="slider-button">View Product</div>
+          </Link>
         </div>
       </div>
       <div className="second-arrows-container">

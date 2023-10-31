@@ -7,11 +7,7 @@ export default function CardButton({ estado, funcion }) {
       className={`boton-${estado === "quitar" ? "quitar" : "agregar"}`}
       onClick={() => funcion()}
     >
-      {estado === "quitar" ? (
-        <i className="fa fa-check"></i>
-      ) : (
-        "Añadir al carrito"
-      )}
+      {estado === "quitar" ? <i className="fa fa-check"></i> : "Add to cart"}
     </button>
   );
 }

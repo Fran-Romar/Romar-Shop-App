@@ -38,7 +38,7 @@ export default function Navbar({ categories }) {
           to="/carrito"
           onClick={showNavbar}
         >
-          <Badge badgeContent={listaCompras.length} color="warning" max={99}>
+          <Badge badgeContent={listaCompras.length} color="secondary" max={99}>
             <ShoppingCartIcon color="action" />
           </Badge>
         </NavLink>

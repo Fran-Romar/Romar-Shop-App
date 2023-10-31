@@ -9,13 +9,15 @@ export default function CartCard({ item }) {
     <Col md="12" key={item.id}>
       <div className="item-card-container">
         <Row>
-          <Col md="4" className="item-card-img-container">
+          <Col lg="4">
             <img className="item-card-img" src={item.image} alt={item.title} />
           </Col>
-          <Col md="6">
+          <Col lg="8">
             <div className="item-card-content">
-              <p>{item.title}</p>
-              <p>Price: {item.price}$</p>
+              <p className="item-card-title">{item.title}</p>
+              <p className="item-card-price">
+                Best price: <strong>{item.price}$</strong>
+              </p>
               <CardCartButtons item={item}></CardCartButtons>
             </div>
           </Col>

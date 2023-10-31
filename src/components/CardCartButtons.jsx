@@ -28,7 +28,7 @@ export default function CardCartButtons({ item }) {
         className="button-delete"
         onClick={() => eliminarCompra(item.id)}
       >
-        Delete
+        <i className="fa fa-trash"></i> Delete
       </button>
     </div>
   );

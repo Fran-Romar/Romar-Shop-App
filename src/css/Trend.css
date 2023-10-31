@@ -2,11 +2,18 @@
 
 .trend-card-container{
     width: 100%;
-    background-color: #242424;
+    background-color: white;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
     height: auto;
-    color: white;
+    color: black;
 
     margin: 20px 0;
+    transition: 0.3s ease;
+}
+
+.trend-card-container:hover{
+    box-shadow: 0 0 10px grey;
     transition: 0.3s ease;
 }
 
@@ -36,9 +43,6 @@
 
     width: 80%;
     height: 300px;
-
-    border-radius: 15px;
-    box-shadow: 0 0 5px yellow;
 }
 
 .trend-card-content{
@@ -74,25 +78,25 @@
 
 .trend-boton-agregar {
     width: 100%;
-    background-color: #dde30f;
-    color: #242424;
-    border: none;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;
 }
 
 .trend-boton-agregar:hover{
-    border: 2px solid #dde30f;
-    background-color: #242424;
-    color: #dde30f;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
 }
 
 .trend-boton-quitar {
     width: 100%;
-    border: 2px solid #dde30f;
-    background-color: #242424;
-    color: #dde30f;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: 700;

@@ -3,14 +3,12 @@ import React, { useContext } from "react";
 import { Row, Container } from "react-bootstrap";
 
 import Card from "../components/Card";
-import { useButton } from "../hooks/useButton";
 import { ProductoContext } from "../context/ProductoContext";
 
 import "../css/Products.css";
 
 export default function Products() {
   const { products } = useContext(ProductoContext);
-  const { handleAgregar, handleQuitar } = useButton();
 
   return (
     <Container>
@@ -18,12 +16,7 @@ export default function Products() {
       <div className="cards-container">
         <Row>
           {products.map((product) => (
-            <Card
-              key={product.id}
-              product={product}
-              handleAgregar={() => handleAgregar(product)}
-              handleQuitar={() => handleQuitar(product.id)}
-            ></Card>
+            <Card key={product.id} product={product}></Card>
           ))}
         </Row>
       </div>

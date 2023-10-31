@@ -4,14 +4,12 @@ import { Row } from "react-bootstrap";
 
 import Card from "../components/Card";
 import { ProductoContext } from "../context/ProductoContext";
-import { useButton } from "../hooks/useButton";
 
 import "../css/Products.css";
 
 export default function CategoryPage({ category }) {
   const [catProducts, setcatProducts] = useState(null);
   const { products } = useContext(ProductoContext);
-  const { handleAgregar, handleQuitar } = useButton();
 
   useEffect(() => {
     if (products && category) {
@@ -29,12 +27,7 @@ export default function CategoryPage({ category }) {
         <Row>
           {catProducts &&
             catProducts.map((product) => (
-              <Card
-                key={product.id}
-                product={product}
-                handleAgregar={() => handleAgregar(product)}
-                handleQuitar={() => handleQuitar(product.id)}
-              ></Card>
+              <Card key={product.id} product={product}></Card>
             ))}
         </Row>
       </div>
